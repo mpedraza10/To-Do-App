@@ -14,7 +14,7 @@ function addTask() {
 
     // Create an input element with the type radio 
     const newTaskRadioListInput = document.createElement('input');
-    newTaskRadioListInput.setAttribute('type', 'radio');
+    newTaskRadioListInput.setAttribute('type', 'checkbox');
     newTaskRadioListInput.setAttribute('id', 'task');
 
     // Append tu the ul the input and label to the li created
