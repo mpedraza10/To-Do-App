@@ -67,7 +67,7 @@ li label{
     font-weight: 400;
 }
 
-#task {
+.task {
     width: auto;
     margin: 0 0.5rem 0 0;
     accent-color: black;
@@ -75,14 +75,16 @@ li label{
 
 #add-task-btn {
     font: inherit;
+    background-color: rgb(188, 30, 30);
     border: 1px solid rgb(188, 30, 30);
-    background-color: white;
     border-radius: 6px;
+    color: white;
 }
 
 #add-task-btn:hover {
-    background-color: rgb(188, 30, 30);
-    color: white;
+    border: 1px solid rgb(188, 30, 30);
+    background-color: white;
+    color: black
 }
 
 @media (max-width: 48rem) {
