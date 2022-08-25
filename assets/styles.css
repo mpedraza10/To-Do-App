@@ -67,6 +67,10 @@ li label{
     font-weight: 400;
 }
 
+li label.checked{
+    text-decoration: line-through;
+}
+
 .task {
     width: auto;
     margin: 0 0.5rem 0 0;

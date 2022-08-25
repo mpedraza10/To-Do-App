@@ -1,9 +1,19 @@
+// Save the input task element in a variable and the button to add tasks
+const newTaskInputElement = document.getElementById('new-task-input');
 const addTaskBtn = document.getElementById('add-task-btn');
 
+// Function to updates if the task is checked in order to cross the task
+function updateStatus(selectedTask) {
+    const labelToDelete = selectedTask.nextElementSibling;
+    if (selectedTask.checked) {
+        labelToDelete.classList.add("checked")
+    } else {
+        labelToDelete.classList.remove("checked")
+    }
+}
+
+// Function to add and create a new list item, the task, and put it in the ul
 function addTask() {
-    // Save the input task element in a variable
-    const newTaskInputElement = document.getElementById('new-task-input');
-    
     // Create a new li 
     const newTaskListItem = document.createElement('li');
 
@@ -15,6 +25,7 @@ function addTask() {
     // Create an input element with the type radio 
     const newTaskRadioListInput = document.createElement('input');
     newTaskRadioListInput.setAttribute('type', 'checkbox');
+    newTaskRadioListInput.setAttribute('onClick', 'updateStatus(this)');
     newTaskRadioListInput.setAttribute('class', 'task');
 
     // Append tu the ul the input and label to the li created
@@ -29,4 +40,12 @@ function addTask() {
     newTaskInputElement.value = "";
 }
 
+// Call event listener on the button if it is clicked we add new task using the function addTask
 addTaskBtn.addEventListener('click', addTask);
+
+// Added event lister if the user hits enter instead of using the button
+newTaskInputElement.addEventListener('keyup', addEnterKey => { 
+    if(addEnterKey.key == "Enter") {
+        addTask();
+    }
+});
