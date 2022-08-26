@@ -8,6 +8,6 @@ Simple responsive To-Do App made with HTML, CSS, and JavaScript where you can ad
 
 ## Application
 
-![AppVideo](app.gif)
+![AppVideo](/Images-Videos/app.gif)
 
 ***
