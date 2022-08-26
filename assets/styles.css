@@ -64,6 +64,7 @@ li {
 }
 
 li label{
+    width: 100%;
     font-weight: 400;
 }
 
@@ -77,12 +78,27 @@ li label.checked{
     accent-color: black;
 }
 
+#delete-task-btn {
+    font: inherit;
+    background-color: rgb(188, 30, 30);
+    border: 1px solid rgb(188, 30, 30);
+    border-radius: 6px;
+    color: white;
+}
+
+#delete-task-btn:hover {
+    border: 1px solid rgb(188, 30, 30);
+    background-color: white;
+    color: rgb(188, 30, 30);
+}
+
 #add-task-btn {
     font: inherit;
     background-color: rgb(188, 30, 30);
     border: 1px solid rgb(188, 30, 30);
     border-radius: 6px;
     color: white;
+    padding: 0.2rem 0.5rem;
 }
 
 #add-task-btn:hover {

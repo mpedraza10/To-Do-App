@@ -12,6 +12,11 @@ function updateStatus(selectedTask) {
     }
 }
 
+// Function to delete a task
+function deleteTask(taskToDelete) {
+    taskToDelete.parentElement.remove();
+}
+
 // Function to add and create a new list item, the task, and put it in the ul
 function addTask() {
     // Create a new li 
@@ -28,9 +33,16 @@ function addTask() {
     newTaskRadioListInput.setAttribute('onClick', 'updateStatus(this)');
     newTaskRadioListInput.setAttribute('class', 'task');
 
+    // Create a button to delete the task when completed
+    const deleteTaskBtn = document.createElement('button');
+    deleteTaskBtn.setAttribute('id', 'delete-task-btn');
+    deleteTaskBtn.setAttribute('onClick', 'deleteTask(this)');
+    deleteTaskBtn.innerText = "X"
+
     // Append tu the ul the input and label to the li created
     newTaskListItem.appendChild(newTaskRadioListInput);
     newTaskListItem.appendChild(newTaskListLabel);
+    newTaskListItem.appendChild(deleteTaskBtn);
 
     // Save the ul in a variable and append a new child which is the new list item created
     const taskListElement = document.getElementById('tasks-list');
